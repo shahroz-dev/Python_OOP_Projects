@@ -2,6 +2,9 @@
 
 # Press Shift+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+import numpy as np
+
+print(np.array([1, 2, 3, 4, 5]))
 
 
 def print_hi(name):
