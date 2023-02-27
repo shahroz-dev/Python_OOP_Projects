@@ -25,6 +25,7 @@ class Restaurant:
         return "Restaurant name is {} and cuisine type is {}.".format(self.restaurant_name, self.cuisine_type)
 
 
+print(Restaurant.__doc__)
 restaurant1 = Restaurant('KFC', 'Fast Food')
 print(repr(restaurant1))
 print(str(restaurant1))

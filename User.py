@@ -37,6 +37,7 @@ class User:
         return "User's name is {} {}.".format(self.first_name, self.last_name)
 
 
+print(User.__doc__)
 user1 = User('Muhammad', 'Shahroz', 'mshahroz1996', 'shahrozarif28@gmail.com', 'Faisalabad')
 print(repr(user1))
 print(str(user1))
