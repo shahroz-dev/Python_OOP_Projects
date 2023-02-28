@@ -18,6 +18,7 @@ class User:
         self.username = username
         self.email = email
         self.location = location
+        self.login_attempts = 0
 
     def describe_user(self):
         print("User's first name is {}.".format(self.first_name))
@@ -28,6 +29,15 @@ class User:
 
     def greet_user(self):
         print("Hello {} {}, welcome back!".format(self.first_name, self.last_name))
+
+    def print_login_attempts(self):
+        print("User has tried to login {} times.".format(self.login_attempts))
+
+    def increment_login_attempts(self):
+        self.login_attempts += 1
+
+    def reset_login_attempts(self):
+        self.login_attempts = 0
 
     def __repr__(self):
         return "User('{}', '{}', '{}', '{}', '{}')".format(self.first_name, self.last_name, self.username, self.email,
@@ -43,3 +53,10 @@ print(repr(user1))
 print(str(user1))
 user1.describe_user()
 user1.greet_user()
+user1.print_login_attempts()
+user1.increment_login_attempts()
+user1.increment_login_attempts()
+user1.increment_login_attempts()
+user1.print_login_attempts()
+user1.reset_login_attempts()
+user1.print_login_attempts()
