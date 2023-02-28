@@ -1,3 +1,6 @@
+import self as self
+
+
 class User:
     """
     A class that represents a user profile.
@@ -47,6 +50,29 @@ class User:
         return "User's name is {} {}.".format(self.first_name, self.last_name)
 
 
+class Admin(User):
+    def __init__(self, first_name, last_name, username, email, location):
+        super().__init__(first_name, last_name, username, email, location)
+        self.privileges = Privileges()
+
+    def __repr__(self):
+        return "Admin('{}', '{}', '{}', '{}', '{}')".format(self.first_name, self.last_name, self.username, self.email,
+                                                            self.location)
+
+    def __str__(self):
+        return "Admin's name is {} {}.".format(self.first_name, self.last_name)
+
+
+class Privileges:
+    def __init__(self):
+        self.privileges = ['can add post', 'can delete post', 'can ban user']
+
+    def show_privileges(self):
+        print("Admin's privileges are: ")
+        for privilege in self.privileges:
+            print(privilege)
+
+
 print(User.__doc__)
 user1 = User('Muhammad', 'Shahroz', 'mshahroz1996', 'shahrozarif28@gmail.com', 'Faisalabad')
 print(repr(user1))
@@ -60,3 +86,9 @@ user1.increment_login_attempts()
 user1.print_login_attempts()
 user1.reset_login_attempts()
 user1.print_login_attempts()
+admin1 = Admin('Muhammad', 'Shahroz', 'mshahroz1996', 'shahrozarif28@gmail.com', 'Faisalabad')
+print(repr(admin1))
+print(str(admin1))
+admin1.describe_user()
+admin1.greet_user()
+admin1.privileges.show_privileges()
