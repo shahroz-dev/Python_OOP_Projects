@@ -1,6 +1,3 @@
-import self as self
-
-
 class User:
     """
     A class that represents a user profile.
