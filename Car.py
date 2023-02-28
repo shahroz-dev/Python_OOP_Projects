@@ -67,7 +67,7 @@ class ElectricCar(Car):
         Initialize attributes of the parent class.
         Then initialize attributes specific to an electric car.
         """
-        super().__init__(make, model, year)
+        super().__init__(make, model, year) # super() is used to call the __init__() method from the parent class
         self.battery = Battery() # Instance as attribute
 
     def fill_gas_tank(self):
