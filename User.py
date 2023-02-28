@@ -51,6 +51,20 @@ class User:
 
 
 class Admin(User):
+
+    """
+    A class that represents an admin profile.
+
+        Parameters: first_name (str): The first name of the user.
+                    last_name (str): The last name of the user.
+                    username (str): The username of the user.
+                    email (str): The email of the user.
+                    location (str): The location of the user.
+
+        Returns: None
+
+    """
+
     def __init__(self, first_name, last_name, username, email, location):
         super().__init__(first_name, last_name, username, email, location)
         self.privileges = Privileges()
@@ -64,6 +78,16 @@ class Admin(User):
 
 
 class Privileges:
+
+    """
+    A class that represents an admin's privileges.
+
+        Parameters: None
+
+        Returns: None
+
+    """
+
     def __init__(self):
         self.privileges = ['can add post', 'can delete post', 'can ban user']
 
